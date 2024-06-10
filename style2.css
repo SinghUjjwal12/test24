@@ -259,7 +259,7 @@ body {
 @media screen and (max-width: 576px) {
   .semicircle {
     height: 53.875rem;
-    width: 25.6rem;
+    width: 24.5rem;
     margin-left: 0rem;
     border-radius: 0 0 80% 80%;
   }
@@ -1173,7 +1173,7 @@ hr {
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
-  font-size: 1rem;
+  font-size: 1.1em;
   -webkit-animation: typing 3s steps(22), blink .5s step-end infinite alternate;
 }
 }
