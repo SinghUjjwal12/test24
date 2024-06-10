@@ -182,9 +182,9 @@ body {
     margin-left: 23rem;
   }
 
-  .wrapper {
-    /* width: min-content; */
-  }
+  /* .wrapper {
+    width: min-content;
+  } */
 
   .nav-links-desktop {
     display: none;
@@ -211,6 +211,7 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
+
 
 .media ul {
   list-style: none;
@@ -1156,5 +1157,23 @@ hr {
 
 .description{
   left: 35%;
+}
+
+.wrapper2 {
+  height: 10vh;
+  position: relative;
+  top: 7rem;
+  left: 1rem;
+}
+
+.typing-demo {
+  width: 44ch;
+  animation: typing 3s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1.3em;
+  -webkit-animation: typing 3s steps(22), blink .5s step-end infinite alternate;
 }
 }

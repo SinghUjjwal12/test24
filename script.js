@@ -71,10 +71,17 @@ arrowContainer.addEventListener('click', function() {
   }entIndex;
   
 
+/**************on scroll hide social media*******/
 
 
-
-
+window.onscroll = function() {
+  var mediaDiv = document.querySelector(".media");
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      mediaDiv.style.display = "none";
+  } else {
+      mediaDiv.style.display = "block";
+  }
+};
 
 
 
