@@ -64,7 +64,7 @@ body {
   /* Change to column */
   gap: 20px;
   position: fixed;
-  top: 50px;
+  top: 68px;
   /* Adjust top position */
   right: 0;
   height: calc(100vh - 50px);
