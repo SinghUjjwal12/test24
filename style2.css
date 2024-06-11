@@ -64,7 +64,7 @@ body {
   /* Change to column */
   gap: 20px;
   position: fixed;
-  top: 68px;
+  top: 50px;
   /* Adjust top position */
   right: 0;
   height: calc(100vh - 50px);
@@ -588,13 +588,13 @@ html {
   z-index: 2;
 }
 
-.two-components {
+/* .two-components {
   display: flex;
   align-items: center;
   margin-top: 20vh;
-}
+} */
 
-.left {
+/* .left {
   flex: 0 0 auto;
   margin-right: 20px;
 }
@@ -605,8 +605,8 @@ html {
   border-radius: 8px;
 }
 
-.right {
-  flex: 1;
+.right { */
+  /* flex: 1;
 }
 
 .heading-right h2 {
@@ -631,9 +631,9 @@ html {
 
 .btn-pip button:hover {
   background-color: #0c0c0c;
-}
+} */
 
-.two-components2 {
+/* .two-components2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -644,11 +644,11 @@ html {
   max-width: 50%;
   flex: 1;
   padding-right: 20px;
-}
+} */
 
-.heading-lefty h2 {
+/* .heading-lefty h2 {
   font-size: 3
-}
+} */
 
 
 
@@ -1177,4 +1177,106 @@ hr {
   font-size: 1.1em;
   -webkit-animation: typing 3s steps(22), blink .5s step-end infinite alternate;
 }
+}
+
+.two-components-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.two-components,
+.two-components2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.left,
+.right,
+.lefty,
+.righty {
+  flex: 1;
+  padding: 20px;
+}
+
+.left,
+.lefty {
+  text-align: center;
+}
+
+.left img,
+.lefty img {
+  max-width: 100%;
+  height: auto;
+}
+
+.heading-right,
+.heading-lefty {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-pip,
+.btn-pip-lefty {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-pip button,
+.btn-pip-lefty button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-pip button:hover,
+.btn-pip-lefty button:hover {
+  background-color: #3e8e41;
+}
+
+@media screen and (max-width: 768px) {
+  .two-components,
+  .two-components2 {
+    flex-direction: column;
+  }
+
+  .left,
+  .right,
+  .lefty,
+  .righty {
+    width: 100%;
+  }
+
+  .left img,
+  .lefty img {
+    width: 100%;
+  }
+
+  .btn-pip button,
+  .btn-pip-lefty button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+.left img,
+.lefty img,
+.right img,
+.righty img {
+  max-width: 100%;
+  height: auto;
+}
+
+.heading-lefty h2{
+  font-size: 24px;
 }
