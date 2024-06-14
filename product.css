@@ -47,6 +47,10 @@
     background-color: #c4db6f;
     color: #0f0f0f;
 }
+.open.active {
+    background-color: #c4db6f;
+    color: #0f0f0f;
+}
 
 .product-categories .products {
     width: 70%;
@@ -79,7 +83,9 @@
 }
 
 .products .product-item .button-container button {
-    background-color: #81ba8a;
+    /* background-color: #81ba8a; */
+    /* background: linear-gradient(to right, #8aa6a3, #10403b); */
+    background: #c4db6f;
     color: #0a0a0a;
     padding: 10px 20px;
     border: none;
@@ -89,7 +95,9 @@
 }
 
 .products .product-item .button-container button:hover {
-    background-color: #828582;
+    background: #caee48;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
 }
 
 

@@ -30,14 +30,14 @@
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="form.html">Contact Us</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="product.html">Products</a></li>
         </ul>
 
         <!-- Additional links above 768px -->
         <ul class="nav-links-desktop">
             <li><a href="index.html">Home</a></li>
             <li><a href="form.html">Contact Us</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="product.html">Products</a></li>
         </ul>
 
     </nav>
@@ -52,14 +52,14 @@
                     <li onclick="showCategory('modbus')">MODBUS RTU Input / Output Modules</li>
                     <li onclick="showCategory('data-loggers')">Data Loggers</li>
                     <li onclick="showCategory('remote-monitoring')">Ethernet/GSM Based Remote Monitoring Control and Logging</li> -->
-                    <li onclick="hide(); showCategory('rtd-sensor');">RTD Sensor</li>
-                    <li onclick="showCategory('thermo-couples'); hide();">Thermocouples</li>
-                    <li onclick="showCategory('thermowell'); hide();">ThermoWell</li>
-                    <li onclick="showCategory('indicators'); hide();">Indicators</li>
-                    <li onclick="showCategory('pid-controller'); hide();">Pid Controller</li>
-                    <li onclick="showCategory('scanner');; hide();">Scanner</li>
-                    <li onclick="showCategory('humidity'); hide();">Humidity Sensor</li>
-                    <li onclick="showCategory('spare-parts'); hide();">Spare Parts</li>
+                    <li class="open" onclick="hide(); showCategory('rtd-sensor');">RTD Sensor</li>
+                    <li class="open" onclick="showCategory('thermo-couples'); hide();">Thermocouples</li>
+                    <li class="open" onclick="showCategory('thermowell'); hide();">ThermoWell</li>
+                    <li class="open" onclick="showCategory('indicators'); hide();">Indicators</li>
+                    <li class="open" onclick="showCategory('pid-controller'); hide();">Pid Controller</li>
+                    <li class="open" onclick="showCategory('scanner');; hide();">Scanner</li>
+                    <li class="open" onclick="showCategory('humidity'); hide();">Humidity Sensor</li>
+                    <li class="open" onclick="showCategory('spare-parts'); hide();">Spare Parts</li>
 
                 </ul>
             </div>
@@ -75,12 +75,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-container-second" >
-                        <div class="card-second" >
+                    <div class="card-container-second">
+                        <div class="card-second">
                             <div class="card-image">
                                 <img src="itm2.png" alt="Card Image">
                             </div>
-                            <div class="card-title" onclick="showCategory('thermo-couples'); hide();" >
+                            <div class="card-title" onclick="showCategory('thermo-couples'); hide();">
                                 <h3>Thermocouples</h3>
                             </div>
                         </div>
@@ -130,7 +130,7 @@
                             <div class="card-image">
                                 <img src="itm2.png" alt="Card Image">
                             </div>
-                            <div class="card-title" >
+                            <div class="card-title">
                                 <h3>Data-Loggers</h3>
                             </div>
                         </div>
@@ -376,6 +376,22 @@
                 element.style.display = 'flex';
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var items = document.querySelectorAll('.open');
+
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    // Remove 'active' class from all items
+                    items.forEach(function (el) {
+                        el.classList.remove('active');
+                    });
+
+                    // Add 'active' class to the clicked item
+                    this.classList.add('active');
+                });
+            });
+        });
     </script>
     <script src="script.js"></script>
 </body>
