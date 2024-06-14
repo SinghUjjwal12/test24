@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link rel="icon" href="hero-image/logo.png" type="Image/x-icon" />
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f4231d74fb.js"></script>
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="hero-image/logo.png" alt="Logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="form.html">Contact Us</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+
+        <!-- Additional links above 768px -->
+        <ul class="nav-links-desktop">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="form.html">Contact Us</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+
+    </nav>
+    <section class="container">
+        <div class="product-categories">
+            <div class="category-list">
+                <h3 class="product-heading" onclick="show()">Product Categories</h3>
+                <hr>
+                <ul>
+                    <!-- <li onclick="showCategory('application-specific')">Application Specific</li>
+                    <li onclick="showCategory('controllers')">Controllers</li>
+                    <li onclick="showCategory('modbus')">MODBUS RTU Input / Output Modules</li>
+                    <li onclick="showCategory('data-loggers')">Data Loggers</li>
+                    <li onclick="showCategory('remote-monitoring')">Ethernet/GSM Based Remote Monitoring Control and Logging</li> -->
+                    <li onclick="hide(); showCategory('rtd-sensor');">RTD Sensor</li>
+                    <li onclick="showCategory('thermo-couples'); hide();">Thermocouples</li>
+                    <li onclick="showCategory('thermowell'); hide();">ThermoWell</li>
+                    <li onclick="showCategory('indicators'); hide();">Indicators</li>
+                    <li onclick="showCategory('pid-controller'); hide();">Pid Controller</li>
+                    <li onclick="showCategory('scanner');; hide();">Scanner</li>
+                    <li onclick="showCategory('humidity'); hide();">Humidity Sensor</li>
+                    <li onclick="showCategory('spare-parts'); hide();">Spare Parts</li>
+
+                </ul>
+            </div>
+            <div class="products">
+                <div class="card-hidden">
+                    <div class="card-container-second">
+                        <div class="card-second">
+                            <div class="card-image">
+                                <img src="itm2.png" alt="Card Image">
+                            </div>
+                            <div class="card-title" onclick="hide(); showCategory('rtd-sensor');">
+                                <h3>RTD Sensors</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container-second" >
+                        <div class="card-second" >
+                            <div class="card-image">
+                                <img src="itm2.png" alt="Card Image">
+                            </div>
+                            <div class="card-title" onclick="showCategory('thermo-couples'); hide();" >
+                                <h3>Thermocouples</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container-second">
+                        <div class="card-second">
+                            <div class="card-image">
+                                <img src="itm2.png" alt="Card Image">
+                            </div>
+                            <div class="card-title" onclick="showCategory('thermowell'); hide();">
+                                <h3>Thermowells</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container-second">
+                        <div class="card-second">
+                            <div class="card-image">
+                                <img src="itm2.png" alt="Card Image">
+                            </div>
+                            <div class="card-title" onclick="showCategory('indicators'); hide();">
+                                <h3>Indicators</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container-second">
+                        <div class="card-second">
+                            <div class="card-image">
+                                <img src="itm2.png" alt="Card Image">
+                            </div>
+                            <div class="card-title" onclick="showCategory('pid-controller'); hide();">
+                                <h3>PID Controllers</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container-second">
+                        <div class="card-second">
+                            <div class="card-image">
+                                <img src="itm2.png" alt="Card Image">
+                            </div>
+                            <div class="card-title" onclick="showCategory('scanner');; hide();">
+                                <h3>Scanners</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container-second">
+                        <div class="card-second">
+                            <div class="card-image">
+                                <img src="itm2.png" alt="Card Image">
+                            </div>
+                            <div class="card-title" >
+                                <h3>Data-Loggers</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container-second">
+                        <div class="card-second">
+                            <div class="card-image">
+                                <img src="itm2.png" alt="Card Image">
+                            </div>
+                            <div class="card-title" onclick="showCategory('humidity'); hide();">
+                                <h3>Humidity Sensors</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container-second">
+                        <div class="card-second">
+                            <div class="card-image">
+                                <img src="itm2.png" alt="Card Image">
+                            </div>
+                            <div class="card-title" onclick="showCategory('spare-parts'); hide();">
+                                <h3>Spare Parts</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="product-list">
+                    <!-- Product items will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="hero-image/logo.png" class="logo-ft">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis tempora ve
+                    l laudantium excepturi paria tur consequuntur aut dolore nam?
+                    Quae, iste nihil? Maxime, voluptate perferendis?</p>
+            </div>
+            <div class="col">
+                <h3>Office <div class="underline"><span></span></div>
+                </h3>
+                <p>Reg. billing add.-H.NO.-T1, Tekhnad Village,</p>
+                <p>Near DLF Prime </p>
+                <p>Tower, Okhla Phase, Delhi 110020</p>
+                <p class="e-mail">point1control@gmail.com</p>
+                <h4>+91-8920266426, +91-8447354268</h4>
+            </div>
+            <div class="col">
+                <h3>Links <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="index.html"></a>Home</li>
+                    <li><a href="form.html"></a>Services</li>
+                    <li><a href="form.html"></a>About Us</li>
+                    <li><a href=""></a>Products</li>
+                    <li><a href=""></a>Features</li>
+                    <li><a href="form.html"></a>Contact</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter <div class="underline"><span></span></div>
+                </h3>
+                <form>
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></i></button>
+                </form>
+                <div class="social-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Point1 Control © 2024 - All Rights Reserved</p>
+    </footer>
+    <script>
+        TweenMax.from(".logo", 1, {
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+        })
+
+        TweenMax.staggerFrom(".nav-links-desktop ul li", 1, {
+            opacity: 0,
+            x: -20,
+            ease: Power3.easeInOut
+        }, 0.08)
+        const productsData = {
+            'rtd-sensor': [
+                { name: 'Product A', price: 30, img: 'IMG_20240227_010648.png' },
+                { name: 'Product B', price: 40, img: 'datalogger.png' }
+
+            ],
+            'thermo-couples': [
+                { name: 'Product C', price: 25, img: 'hum-sensor.png' },
+                { name: 'Product D', price: 35, img: 'IMG20211230185627.png' }
+
+            ],
+            'thermowell': [
+                { name: 'Product E', price: 20, img: 'IMG20211230185627.png' },
+                { name: 'Product F', price: 50, img: 'IMG_20240227_010648.png' }
+
+            ],
+            'indicators': [
+                { name: 'UNILOG PRO PLUS', price: 45, img: 'IMG_20240227_010648.png' },
+                { name: 'UNIREC', price: 55, img: 'hum-sensor.png' },
+                { name: 'UNIREC PRO', price: 65, img: 'TrmoCpl.png' }
+
+            ],
+            'pid-controller': [
+                { name: 'Product G', price: 60, img: 'IMG_20240227_010648.png' },
+                { name: 'Product H', price: 70, img: 'hum-sensor.png' }
+
+            ],
+            'scanner': [
+                { name: 'UNILOG PRO PLUS', price: 45, img: 'IMG_20240227_010648.png' },
+                { name: 'UNIREC', price: 55, img: 'hum-sensor.png' },
+                { name: 'UNIREC PRO', price: 65, img: 'TrmoCpl.png' }
+
+            ],
+            'humidity': [
+                { name: 'UNILOG PRO PLUS', price: 45, img: 'IMG_20240227_010648.png' },
+                { name: 'UNIREC', price: 55, img: 'hum-sensor.png' },
+                { name: 'UNIREC PRO', price: 65, img: 'TrmoCpl.png' }
+
+            ],
+            'spare-parts': [
+                { name: 'UNILOG PRO PLUS', price: 45, img: 'IMG_20240227_010648.png' },
+                { name: 'UNIREC', price: 55, img: 'hum-sensor.png' },
+                { name: 'UNIREC PRO', price: 65, img: 'TrmoCpl.png' }
+
+            ],
+            'USB-Converter': [
+                { name: 'UNILOG PRO PLUS', price: 45, img: 'IMG_20240227_010648.png' },
+                { name: 'UNIREC', price: 55, img: 'hum-sensor.png' },
+                { name: 'UNIREC PRO', price: 65, img: 'TrmoCpl.png' }
+
+            ],
+            'indicators': [
+                { name: 'UNILOG PRO PLUS', price: 45, img: 'IMG_20240227_010648.png' },
+                { name: 'UNIREC', price: 55, img: 'hum-sensor.png' },
+                { name: 'UNIREC PRO', price: 65, img: 'TrmoCpl.png' }
+
+            ],
+            'Ethernet-Converter': [
+                { name: 'UNILOG PRO PLUS', price: 45, img: 'IMG_20240227_010648.png' },
+                { name: 'UNIREC', price: 55, img: 'hum-sensor.png' },
+                { name: 'UNIREC PRO', price: 65, img: 'TrmoCpl.png' }
+
+            ],
+            'SMPS': [
+                { name: 'UNILOG PRO PLUS', price: 45, img: 'IMG_20240227_010648.png' },
+                { name: 'UNIREC', price: 55, img: 'hum-sensor.png' },
+                { name: 'UNIREC PRO', price: 65, img: 'TrmoCpl.png' }
+
+            ],
+            'proximity': [
+                { name: 'UNILOG PRO PLUS', price: 45, img: 'IMG_20240227_010648.png' },
+                { name: 'UNIREC', price: 55, img: 'hum-sensor.png' },
+                { name: 'UNIREC PRO', price: 65, img: 'TrmoCpl.png' }
+
+            ],
+            'traverse-unit': [
+                { name: 'UNILOG PRO PLUS', price: 45, img: 'IMG_20240227_010648.png' },
+                { name: 'UNIREC', price: 55, img: 'hum-sensor.png' },
+                { name: 'UNIREC PRO', price: 65, img: 'TrmoCpl.png' }
+
+            ]
+        };
+
+        function showCategory(category) {
+            const productList = document.getElementById('product-list');
+            productList.innerHTML = '';
+
+            const products = productsData[category];
+            products.forEach(product => {
+                const productItem = document.createElement('div');
+                productItem.className = 'product-item';
+                productItem.setAttribute('data-price', product.price);
+                productItem.setAttribute('data-name', product.name);
+
+                productItem.innerHTML = `
+                    <img src="${product.img}" alt="${product.name}">
+                    <div class="details">
+                        <h3>${product.name}</h3>
+                    </div>
+                    <div class="button-container">
+                        <button>Learn More</button>
+                    </div>
+                `;
+
+                productList.appendChild(productItem);
+            });
+
+            sortProducts();
+        }
+
+        function sortProducts() {
+            const sortValue = document.getElementById('sort').value;
+            const productList = document.getElementById('product-list');
+            const products = Array.from(productList.getElementsByClassName('product-item'));
+
+            products.sort((a, b) => {
+                let aValue, bValue;
+
+                switch (sortValue) {
+                    case 'price':
+                        aValue = parseFloat(a.getAttribute('data-price'));
+                        bValue = parseFloat(b.getAttribute('data-price'));
+                        return aValue - bValue;
+                    case 'name':
+                        aValue = a.getAttribute('data-name').toLowerCase();
+                        bValue = b.getAttribute('data-name').toLowerCase();
+                        return aValue.localeCompare(bValue);
+                    default:
+                        return 0;
+                }
+            });
+
+            productList.innerHTML = '';
+            products.forEach(product => productList.appendChild(product));
+        }
+
+        // Initially show a default category
+        showCategory('data-loggers');
+
+        function hide() {
+            // Select the div with the class name "card-hidden"
+            var element = document.querySelector('.card-hidden');
+            if (element) {
+                // Hide the div by setting its display property to 'none'
+                element.style.display = 'none';
+            }
+        }
+        function show() {
+            // Select the div with the class name "card-hidden"
+            var element = document.querySelector('.card-hidden');
+            if (element) {
+                // Hide the div by setting its display property to 'none'
+                element.style.display = 'flex';
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
