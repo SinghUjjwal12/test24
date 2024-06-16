@@ -53,7 +53,7 @@ body {
 .line {
   width: 25px;
   height: 3px;
-  background-color: #000000;
+  background-color: #ffffff;
   margin: 3px;
   transition: transform 0.4s, opacity 0.4s;
 }
@@ -683,7 +683,7 @@ html {
 @media (max-width: 700px) {
   .slideshow-container {
     position: relative;
-    width: 80%;
+    width: 75%;
     max-width: 600px;
     left: 23%;
     top: 17rem;
@@ -738,6 +738,7 @@ html {
   position: relative;
   top: 7rem;
   left: 15rem;
+  width: 80%;
 }
 
 .typing-demo {
@@ -935,6 +936,7 @@ html {
 .container .card .contentBx h2 {
   position: relative;
   font-weight: 600;
+  font-family: "Exo 2";
   letter-spacing: 1px;
   color: #000000;
   z-index: 200000;
@@ -1017,6 +1019,7 @@ footer {
 .col {
   flex-basis: 25%;
   padding: 10px;
+  font-family: "Exo 2";
 }
 
 .col:nth-child(2),
@@ -1216,6 +1219,11 @@ hr {
 .left,
 .lefty {
   text-align: center;
+  
+}
+.paragraph-lefty, .paragraph-right p{
+  font-family: Playwrite FR Moderne;
+  text-align: center;
 }
 
 .left img,
@@ -1284,6 +1292,7 @@ hr {
   height: auto;
 }
 
-.heading-lefty h2{
+.heading-lefty h2, .heading-right h2{
   font-size: 24px;
+  font-family:"Exo 2";
 }

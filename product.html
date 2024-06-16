@@ -15,6 +15,11 @@
         integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/f4231d74fb.js"></script>
     <link rel="stylesheet" href="product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Playwrite+FR+Moderne:wght@100..400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -29,22 +34,29 @@
         </div>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="form.html">Contact Us</a></li>
             <li><a href="product.html">Products</a></li>
+            <li><a href="form.html">Contact Us</a></li>
+
         </ul>
 
         <!-- Additional links above 768px -->
         <ul class="nav-links-desktop">
             <li><a href="index.html">Home</a></li>
-            <li><a href="form.html">Contact Us</a></li>
             <li><a href="product.html">Products</a></li>
+            <li><a href="form.html">Contact Us</a></li>
+
         </ul>
 
     </nav>
+    <div class="mid">
+        <div class="head">
+            <h1 id="target-h1"></h1>
+        </div>
+    </div>
     <section class="container">
         <div class="product-categories">
             <div class="category-list">
-                <h3 class="product-heading" onclick="show()">Product Categories</h3>
+                <h3 class="product-heading">Product Categories</h3>
                 <hr>
                 <ul>
                     <!-- <li onclick="showCategory('application-specific')">Application Specific</li>
@@ -52,14 +64,14 @@
                     <li onclick="showCategory('modbus')">MODBUS RTU Input / Output Modules</li>
                     <li onclick="showCategory('data-loggers')">Data Loggers</li>
                     <li onclick="showCategory('remote-monitoring')">Ethernet/GSM Based Remote Monitoring Control and Logging</li> -->
-                    <li class="open" onclick="hide(); showCategory('rtd-sensor');">RTD Sensor</li>
-                    <li class="open" onclick="showCategory('thermo-couples'); hide();">Thermocouples</li>
-                    <li class="open" onclick="showCategory('thermowell'); hide();">ThermoWell</li>
-                    <li class="open" onclick="showCategory('indicators'); hide();">Indicators</li>
-                    <li class="open" onclick="showCategory('pid-controller'); hide();">Pid Controller</li>
-                    <li class="open" onclick="showCategory('scanner');; hide();">Scanner</li>
-                    <li class="open" onclick="showCategory('humidity'); hide();">Humidity Sensor</li>
-                    <li class="open" onclick="showCategory('spare-parts'); hide();">Spare Parts</li>
+                    <li class="open" onclick="add();hide(); showCategory('rtd-sensor');">RTD Sensor</li>
+                    <li class="open" onclick="add();hide(); showCategory('thermo-couples');">Thermocouples</li>
+                    <li class="open" onclick="add();hide(); showCategory('thermowell');">ThermoWell</li>
+                    <li class="open" onclick="add();hide(); showCategory('indecators');">Indicators</li>
+                    <li class="open" onclick="add();hide(); showCategory('pid-controller');">Pid Controller</li>
+                    <li class="open" onclick="add();hide(); showCategory('scanner');">Scanner</li>
+                    <li class="open" onclick="add();hide(); showCategory('humidity');">Humidity Sensor</li>
+                    <li class="open" onclick="add();hide(); showCategory('spare-parts');">Spare Parts</li>
 
                 </ul>
             </div>
@@ -70,58 +82,72 @@
                             <div class="card-image">
                                 <img src="itm2.png" alt="Card Image">
                             </div>
-                            <div class="card-title" onclick="hide(); showCategory('rtd-sensor');">
-                                <h3>RTD Sensors</h3>
+                            <div class="card-title">
+                                <h3><i class="open" onclick="add();hide(); showCategory('rtd-sensor');">RTD Sensors</i>
+                                </h3>
                             </div>
                         </div>
                     </div>
                     <div class="card-container-second">
                         <div class="card-second">
                             <div class="card-image">
-                                <img src="itm2.png" alt="Card Image">
+                                <img src="itm1.png" alt="Card Image">
                             </div>
-                            <div class="card-title" onclick="showCategory('thermo-couples'); hide();">
-                                <h3>Thermocouples</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-container-second">
-                        <div class="card-second">
-                            <div class="card-image">
-                                <img src="itm2.png" alt="Card Image">
-                            </div>
-                            <div class="card-title" onclick="showCategory('thermowell'); hide();">
-                                <h3>Thermowells</h3>
+                            <div class="card-title">
+                                <h3>
+                                    <li class="open" onclick="add();hide(); showCategory('thermo-couples');">
+                                        Thermocouples</i>
+                                </h3>
                             </div>
                         </div>
                     </div>
                     <div class="card-container-second">
                         <div class="card-second">
                             <div class="card-image">
-                                <img src="itm2.png" alt="Card Image">
+                                <img src="thermowell.png" alt="Card Image">
                             </div>
-                            <div class="card-title" onclick="showCategory('indicators'); hide();">
-                                <h3>Indicators</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-container-second">
-                        <div class="card-second">
-                            <div class="card-image">
-                                <img src="itm2.png" alt="Card Image">
-                            </div>
-                            <div class="card-title" onclick="showCategory('pid-controller'); hide();">
-                                <h3>PID Controllers</h3>
+                            <div class="card-title">
+                                <h3>
+                                    <li class="open" onclick="add();hide(); showCategory('thermowell');">Thermowells</i>
+                                </h3>
                             </div>
                         </div>
                     </div>
                     <div class="card-container-second">
                         <div class="card-second">
                             <div class="card-image">
-                                <img src="itm2.png" alt="Card Image">
+                                <img src="indecator.png" alt="Card Image">
                             </div>
-                            <div class="card-title" onclick="showCategory('scanner');; hide();">
-                                <h3>Scanners</h3>
+                            <div class="card-title">
+                                <h3>
+                                    <li class="open" onclick="add();hide(); showCategory('indecators');">Indicators &
+                                        Scanners</i>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container-second">
+                        <div class="card-second">
+                            <div class="card-image">
+                                <img src="pid.png" alt="Card Image">
+                            </div>
+                            <div class="card-title">
+                                <h3>
+                                    <li class="open" onclick="add();hide(); showCategory('pid-controller');">PID
+                                        Controllers</i>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container-second">
+                        <div class="card-second">
+                            <div class="card-image">
+                                <img src="datalogger.png" alt="Card Image">
+                            </div>
+                            <div class="card-title">
+                                <h3>
+                                    <li class="open" onclick="add();hide(); showCategory('scanner');">Data-Loggers</i>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -131,7 +157,10 @@
                                 <img src="itm2.png" alt="Card Image">
                             </div>
                             <div class="card-title">
-                                <h3>Data-Loggers</h3>
+                                <h3>
+                                    <li class="open" onclick="add();hide(); showCategory('humidity');">Humidity
+                                        Sensors</i>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -140,18 +169,11 @@
                             <div class="card-image">
                                 <img src="itm2.png" alt="Card Image">
                             </div>
-                            <div class="card-title" onclick="showCategory('humidity'); hide();">
-                                <h3>Humidity Sensors</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-container-second">
-                        <div class="card-second">
-                            <div class="card-image">
-                                <img src="itm2.png" alt="Card Image">
-                            </div>
-                            <div class="card-title" onclick="showCategory('spare-parts'); hide();">
-                                <h3>Spare Parts</h3>
+                            <div class="card-title">
+                                <h3>
+                                    <li class="open" onclick="add();hide(); showCategory('spare-parts');">Spare
+                                        Parts</i>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -377,21 +399,19 @@
             }
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var items = document.querySelectorAll('.open');
+        /**************/
+        function add() {
+            var element = document.querySelector('.head');
+            if (element) {
+                // Hide the div by setting its display property to 'none'
+                element.style.display = 'flex';
+            }
+            const content = event.target.textContent.trim(); // Get the content of the clicked item
+            console.log('Clicked item content:', content); // Debugging
+            const targetH1 = document.getElementById('target-h1'); // Select the h1 element
+            targetH1.textContent = content;
+        }
 
-            items.forEach(function (item) {
-                item.addEventListener('click', function () {
-                    // Remove 'active' class from all items
-                    items.forEach(function (el) {
-                        el.classList.remove('active');
-                    });
-
-                    // Add 'active' class to the clicked item
-                    this.classList.add('active');
-                });
-            });
-        });
     </script>
     <script src="script.js"></script>
 </body>

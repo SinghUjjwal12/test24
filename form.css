@@ -223,6 +223,10 @@ h1 {
     font-size: xx-large !important;
 }
 
+#contactForm{
+  font-family: "Exo 2";
+}
+
 .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -378,6 +382,7 @@ footer {
 .col {
     flex-basis: 25%;
     padding: 10px;
+    font-family: "Exo 2";
 }
 
 .col:nth-child(2),
