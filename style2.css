@@ -984,7 +984,9 @@ html {
   white-space: nowrap;
 }
 
-
+.media{
+  display: block;
+}
 
 
 /***********************foot***********************************/
